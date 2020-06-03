@@ -1,16 +1,16 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "crate",
+    "password": "12345678",
+    "database": "ecommerce",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "seederStorage": "sequelize"
   },
   "production": {
     "username": "root",
-    "password": null,
-    "database": "crate",
+    "password": "12345678",
+    "database": "ecommerce",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "seederStorage": "sequelize"
