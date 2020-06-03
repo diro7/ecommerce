@@ -53,4 +53,28 @@
     "styled-jsx": "3.2.5",
     "validator": "13.0.0"
   }
+  {
+    "name": "ecommerce",
+    "version": "1.0.0",
+    "description": "eccomerce",
+    "scripts": {
+      "setup": "npm run setup:local && npm run setup:all",
+      "setup:local": "npm install",
+      "setup:all": "concurrently 'npm run setup:web' 'npm run setup:api'  --names 'web,api'",
+      "setup:web": "npm run setup --prefix web",
+      "setup:api": "npm run setup --prefix api",
+      "start": "concurrently 'npm run start:web' 'npm run start:api' --kill-others --names 'web,api'",
+      "start:web": "npm run start --prefix web",
+      "start:api": "npm run start --prefix api"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/diro7/ecommerce.git"
+    },
+    "author": "",
+    "dependencies": {},
+    "devDependencies": {
+      "concurrently": "^4.1.0"
+    }
+  }
 }
