@@ -9,3 +9,5 @@ RUN npm install
 
 # add app
 COPY . ./
+
+dependencies
