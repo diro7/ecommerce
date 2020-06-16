@@ -1,30 +1,55 @@
 // Imports
-import React from 'react'
+import React from "react";
 
 // UI Imports
-import { Grid, GridCell } from '../../../ui/grid'
-import { black, grey } from "../../../ui/common/colors"
+import { Grid, GridCell } from "../../../ui/grid";
+import { black, grey } from "../../../ui/common/colors";
 
 // App Imports
-import admin from '../../../setup/routes/admin'
-import Menu from '../../common/header/Menu'
-import MenuItem from '../../common/header/MenuItem'
+import admin from "../../../setup/routes/admin";
+import Menu from "../../common/header/Menu";
+import MenuItem from "../../common/header/MenuItem";
 
 // Component
 const AdminMenu = () => (
   <Grid style={{ backgroundColor: grey }}>
-    <GridCell style={{ padding: '2em', textAlign: 'center' }}>
+    <GridCell style={{ padding: "2em", textAlign: "center" }}>
       <Menu>
-        <MenuItem to={admin.dashboard.path} type="primary" style={{ color: black }}>Dashboard</MenuItem>
+        <MenuItem
+          to={admin.dashboard.path}
+          type="primary"
+          style={{ color: black }}
+        >
+          Tablero
+        </MenuItem>
 
-        <MenuItem to={admin.productList.path} section="products" type="primary" style={{ color: black }}>Products</MenuItem>
+        <MenuItem
+          to={admin.productList.path}
+          section="products"
+          type="primary"
+          style={{ color: black }}
+        >
+          Productos
+        </MenuItem>
 
-        <MenuItem to={admin.crateList.path} type="primary" style={{ color: black }}>Crates</MenuItem>
+        <MenuItem
+          to={admin.crateList.path}
+          type="primary"
+          style={{ color: black }}
+        >
+          Cajas
+        </MenuItem>
 
-        <MenuItem to={admin.subscriptionList.path} type="primary" style={{ color: black }}>Subscriptions</MenuItem>
+        <MenuItem
+          to={admin.subscriptionList.path}
+          type="primary"
+          style={{ color: black }}
+        >
+          Subscribirse
+        </MenuItem>
       </Menu>
     </GridCell>
   </Grid>
-)
+);
 
-export default AdminMenu
+export default AdminMenu;

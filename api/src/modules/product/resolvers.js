@@ -1,33 +1,33 @@
 // App Imports
-import params from '../../config/params'
-import models from '../../setup/models'
+import params from "../../config/params";
+import models from "../../setup/models";
 
 // Get all products
 export async function getAll() {
-  return await models.Product.findAll({ order: [['id', 'DESC']] })
+  return await models.Product.findAll({ order: [["id", "DESC"]] });
 }
 
 // Get product by slug
 export async function getBySlug(parentValue, { slug }) {
-  const product = await models.Product.findOne({ where: { slug } })
+  const product = await models.Product.findOne({ where: { slug } });
 
   if (!product) {
     // Product does not exists
-    throw new Error('The product you are looking for does not exists or has been discontinued.')
+    throw new Error("El producto que busca no existe o ha sido descontinuado.");
   } else {
-    return product
+    return product;
   }
 }
 
 // Get product by ID
 export async function getById(parentValue, { productId }) {
-  const product = await models.Product.findOne({ where: { id: productId } })
+  const product = await models.Product.findOne({ where: { id: productId } });
 
   if (!product) {
     // Product does not exists
-    throw new Error('The product you are looking for does not exists or has been discontinued.')
+    throw new Error("El producto que busca no existe o ha sido descontinuado.");
   } else {
-    return product
+    return product;
   }
 }
 
@@ -35,32 +35,40 @@ export async function getById(parentValue, { productId }) {
 export async function getRelated(parentValue, { productId }) {
   return await models.Product.findAll({
     where: {
-      id: { [models.Sequelize.Op.not]: productId }
+      id: { [models.Sequelize.Op.not]: productId },
     },
     limit: 3,
-    order: [[models.Sequelize.fn('RAND')]] // mock related products by showing random products
-  })
+    order: [[models.Sequelize.fn("RAND")]], // mock related products by showing random products
+  });
 }
 
 // Create product
-export async function create(parentValue, { name, slug, description, type, gender, image }, { auth }) {
-  if(auth.user && auth.user.role === params.user.roles.admin) {
+export async function create(
+  parentValue,
+  { name, slug, description, type, gender, image },
+  { auth }
+) {
+  if (auth.user && auth.user.role === params.user.roles.admin) {
     return await models.Product.create({
       name,
       slug,
       description,
       type,
       gender,
-      image
-    })
+      image,
+    });
   } else {
-    throw new Error('Operation denied.')
+    throw new Error("Operacion denegada.");
   }
 }
 
 // Update product
-export async function update(parentValue, { id, name, slug, description, type, gender, image }, { auth }) {
-  if(auth.user && auth.user.role === params.user.roles.admin) {
+export async function update(
+  parentValue,
+  { id, name, slug, description, type, gender, image },
+  { auth }
+) {
+  if (auth.user && auth.user.role === params.user.roles.admin) {
     return await models.Product.update(
       {
         name,
@@ -68,32 +76,32 @@ export async function update(parentValue, { id, name, slug, description, type, g
         description,
         type,
         gender,
-        image
+        image,
       },
       { where: { id } }
-    )
+    );
   } else {
-    throw new Error('Operation denied.')
+    throw new Error("Operacion Denegada.");
   }
 }
 
 // Delete product
 export async function remove(parentValue, { id }, { auth }) {
-  if(auth.user && auth.user.role === params.user.roles.admin) {
-    const product = await models.Product.findOne({where: {id}})
+  if (auth.user && auth.user.role === params.user.roles.admin) {
+    const product = await models.Product.findOne({ where: { id } });
 
     if (!product) {
       // Product does not exists
-      throw new Error('The product does not exists.')
+      throw new Error("El producto no existe.");
     } else {
-      return await models.Product.destroy({where: {id}})
+      return await models.Product.destroy({ where: { id } });
     }
   } else {
-    throw new Error('Operation denied.')
+    throw new Error("Operacion Denegada.");
   }
 }
 
 // Product types
 export async function getTypes() {
-  return Object.values(params.product.types)
+  return Object.values(params.product.types);
 }
