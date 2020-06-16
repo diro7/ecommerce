@@ -1,4 +1,12 @@
 {
+  "test": {
+    "username": "root",
+    "password": "123456",
+    "database": "ecommerce",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "seederStorage": "sequelize"
+  },
   "development": {
     "username": "root",
     "password": "password",

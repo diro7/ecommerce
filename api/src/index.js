@@ -21,3 +21,5 @@ setupGraphQL(server)
 
 // Start server
 setupStartServer(server)
+
+export default server;
