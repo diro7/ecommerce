@@ -1,10 +1,10 @@
-version: '3'
+version: "3"
 
 services:
   api:
     image: api:latest
     build: api/
-    command: sh -c './wait-for db:3306 -- npm start'
+    command: bash -c 'ls && ./wait-for.sh db:3306 -- npm start'
     ports:
       - "8000:8000"
     depends_on:
@@ -13,7 +13,7 @@ services:
   web:
     build: web/
     ports:
-        - "3000:3000"
+      - "3000:3000"
     depends_on:
       - db
 
@@ -21,6 +21,5 @@ services:
     image: mysql:5.7
     restart: always
     environment:
-      MYSQL_DATABASE: 'ecommerce'
-      MYSQL_ROOT_PASSWORD: 'password'
-
+      MYSQL_DATABASE: "ecommerce"
+      MYSQL_ROOT_PASSWORD: "password"
