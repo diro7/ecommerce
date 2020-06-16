@@ -10,7 +10,8 @@
     "setup:api": "npm run setup --prefix api",
     "start": "concurrently 'npm run start:web' 'npm run start:api' --kill-others --names 'web,api'",
     "start:web": "npm run start --prefix web",
-    "start:api": "npm run start --prefix api"
+    "start:api": "npm run start --prefix api",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -22,8 +23,15 @@
     "url": "https://github.com/atulmy/crate/issues"
   },
   "homepage": "https://github.com/atulmy/crate#readme",
-  "dependencies": {},
+  "dependencies": {
+    "@babel/core": "^7.10.2",
+    "save-dev": "0.0.1-security",
+    "ts-jest": "^26.1.0"
+  },
   "devDependencies": {
-    "concurrently": "^4.1.0"
+    "@babel/preset-env": "^7.10.2",
+    "babel-jest": "^26.0.1",
+    "concurrently": "^4.1.0",
+    "jest": "^26.0.1"
   }
 }
