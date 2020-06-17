@@ -55,9 +55,9 @@ class Onboarding extends PureComponent {
       <Grid alignCenter={true} style={{ height: '100%', textAlign: 'center', color: white }}>
         {/* Left - Headline and info */}
         <GridCell>
-          <H1 font="secondary" style={{ textShadow: textLevel1 }}>Welcome to Crate</H1>
+          <H1 font="secondary" style={{ textShadow: textLevel1 }}>Bienvenido a Crate</H1>
 
-          <H6 style={{ marginTop: '0.5em' }}>Your monthly subscription of trendy <br/> clothes and accessories</H6>
+          <H6 style={{ marginTop: '0.5em' }}>Su tienda en linea de <br/> clothes and accessories</H6>
 
           <Button theme="primary" style={{ marginTop: '1.5em' }} onClick={this.nextStep}>Next</Button>
         </GridCell>
