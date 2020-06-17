@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`My Connected React-Redux Component should render with given state from Redux store 1`] = `
+Array [
+  <div>
+    <div
+      className="jsx-856475002 "
+      style={
+        Object {
+          "backgroundAttachment": "fixed",
+          "backgroundImage": "url('http://localhost:3000/images/cover.jpg')",
+          "backgroundPosition": "center top",
+          "backgroundSize": "cover",
+          "color": "#ffffff",
+          "height": "calc(100vh - 5em)",
+          "textAlign": "center",
+        }
+      }
+    >
+      <div
+        className="jsx-230203545 "
+      >
+        <h1
+          className="jsx-3315563251 "
+          style={
+            Object {
+              "textShadow": "0px 2px 2px rgba(0, 0, 0, 0.14)",
+            }
+          }
+        >
+          Crate
+        </h1>
+        <h4
+          className="jsx-3486686285 "
+          style={
+            Object {
+              "marginTop": "0.5em",
+              "textShadow": "0px 2px 2px rgba(0, 0, 0, 0.14)",
+            }
+          }
+        >
+          Monthly subscription of trendy clothes and accessories
+        </h4>
+        <a
+          href="/user/signup"
+          onClick={[Function]}
+        >
+          <button
+            className="jsx-2258186958 "
+            disabled={false}
+            style={
+              Object {
+                "marginTop": "1em",
+              }
+            }
+            type="button"
+          >
+            Get Started
+          </button>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div
+        style={
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "opacity": 1,
+            "position": "fixed",
+            "right": 0,
+            "top": 0,
+            "transition": "opacity 0.25s ease-in-out",
+            "visibility": "visible",
+            "zIndex": 9,
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "background": "url('/images/cover.jpg') top center",
+              "backgroundSize": "cover",
+              "bottom": "-40px",
+              "filter": "blur(25px)",
+              "left": "-40px",
+              "position": "fixed",
+              "right": "-40px",
+              "top": "-40px",
+              "zIndex": -1,
+            }
+          }
+        />
+        <div
+          className="jsx-856475002 "
+          style={
+            Object {
+              "color": "#ffffff",
+              "height": "100%",
+              "textAlign": "center",
+            }
+          }
+        >
+          <div
+            className="jsx-230203545 "
+          >
+            <h1
+              className="jsx-3315563251 "
+              style={
+                Object {
+                  "textShadow": "0px 2px 2px rgba(0, 0, 0, 0.14)",
+                }
+              }
+            >
+              Bienvenido a Crate
+            </h1>
+            <h6
+              className="jsx-948395976 "
+              style={
+                Object {
+                  "marginTop": "0.5em",
+                }
+              }
+            >
+              Su tienda en linea de 
+              <br />
+               clothes and accessories
+            </h6>
+            <button
+              className="jsx-1228826222 "
+              disabled={false}
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginTop": "1.5em",
+                }
+              }
+              type="button"
+            >
+              Next
+            </button>
+          </div>
+          <div
+            className="jsx-230203545 "
+          >
+            <img
+              alt="collage"
+              src="http://localhost:3000/images/collage.png"
+              style={
+                Object {
+                  "width": 400,
+                }
+              }
+              title="products collage"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  ");",
+]
+`;
