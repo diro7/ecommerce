@@ -5,11 +5,7 @@
   "scripts": {
     "setup": "npm run setup:local && npm run setup:all",
     "setup:local": "npm install",
-<<<<<<< HEAD
-    "setup:all": "concurrently 'npx run setup:web' 'npx run setup:api'  --names 'web,api'",
-=======
     "setup:all": "concurrently 'npm run setup:web' 'npm run setup:api' --names 'web,api'",
->>>>>>> 8d0dd3460a1a739045be3479dfd233a7aac9eabc
     "setup:web": "npm run setup --prefix web",
     "setup:api": "npm run setup --prefix api",
     "start": "concurrently 'npm run start:web' 'npm run start:api' --kill-others --names 'web,api'",
