@@ -47,7 +47,7 @@ const Home = (props) => (
           Crate
         </H1>
 
-        <H4 style={{ textShadow: textLevel1, marginTop: "0.5em" }}>hola</H4>
+        <H4 style={{ textShadow: textLevel1, marginTop: "0.5em" }}>aqui</H4>
 
         {/* Call to action */}
         {props.user.isAuthenticated ? (

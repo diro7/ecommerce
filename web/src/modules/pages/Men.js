@@ -22,7 +22,7 @@ const Men = (props) => (
   <Grid alignCenter={true} style={{ padding: "2em" }}>
     {/* SEO */}
     <Helmet>
-      <title>Hola</title>
+      <title>hombres</title>
     </Helmet>
 
     {/* Left Content - Image Collage */}
@@ -68,7 +68,7 @@ const Men = (props) => (
     <GridCell style={{ textAlign: "center" }}>
       <H2 font="secondary">Monthly crates for Men</H2>
 
-      <H5 style={{ marginTop: "0.5em" }}>hola</H5>
+      <H5 style={{ marginTop: "0.5em" }}>xxxxxxxxx</H5>
 
       {/* Call to action */}
       {props.user.isAuthenticated ? (
@@ -80,7 +80,7 @@ const Men = (props) => (
       ) : (
         <Link to={userRoutes.signup.path}>
           <Button theme="secondary" style={{ marginTop: "1e" }}>
-            Get xx
+            Ver Mas
           </Button>
         </Link>
       )}
