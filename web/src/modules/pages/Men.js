@@ -22,7 +22,7 @@ const Men = (props) => (
   <Grid alignCenter={true} style={{ padding: "2em" }}>
     {/* SEO */}
     <Helmet>
-      <title>hombres</title>
+      <title>Hombres</title>
     </Helmet>
 
     {/* Left Content - Image Collage */}
@@ -66,7 +66,7 @@ const Men = (props) => (
 
     {/* Right Content */}
     <GridCell style={{ textAlign: "center" }}>
-      <H2 font="secondary">Monthly crates for Men</H2>
+      <H2 font="secondary">Cajas mensuales para hombres</H2>
 
       <H5 style={{ marginTop: "0.5em" }}>xxxxxxxxx</H5>
 

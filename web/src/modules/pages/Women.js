@@ -22,7 +22,7 @@ const Women = (props) => (
   <Grid alignCenter={true} style={{ padding: "2em" }}>
     {/* SEO */}
     <Helmet>
-      <title>Monthly supply of clothes and accessories for Women - Crate</title>
+      <title>Suministro mensual de ropa y accesorios para mujeres</title>
     </Helmet>
 
     {/* Left Content - Image Collage */}

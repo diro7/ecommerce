@@ -37,7 +37,7 @@ const Home = (props) => (
       {/* SEO */}
       <Helmet>
         <title>
-          Monthly supply of clothes and accessories for Men and Women - Crate
+          Suministro mensual de ropa y accesorios para hombres y mujeres
         </title>
       </Helmet>
 
