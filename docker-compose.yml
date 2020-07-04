@@ -4,11 +4,12 @@ services:
   api:
     image: api:latest
     build: api/
-    command: bash -c 'ls && ./wait-for.sh db:3306 -- npm start'
+    command: ["./wait-for-it.sh", "db:3306", "--", "npm", "start"]
     ports:
       - "8000:8000"
     depends_on:
       - db
+      - web
 
   web:
     build: web/
