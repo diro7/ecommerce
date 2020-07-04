@@ -1,0 +1,21 @@
+  
+language:      node_js
+git:
+  depth:       3
+node_js:
+  - "node"
+install:       npm install
+script:
+  - cd web
+  - npm install
+  - npm run test
+  - npm run build:client
+  - cd ..
+  - cd api
+  - npm install
+  - npm run test
+cache:
+  directories:
+    - node_modules
+notifications:
+  email:       false
