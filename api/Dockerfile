@@ -5,7 +5,8 @@ ENV PATH /app/node_modules/.bin:$PATH
 
 # install app dependencies
 COPY package.json ./
-COPY wait-for.sh ./
+RUN ls
+COPY wait-for-it.sh ./
 COPY package-lock.json ./
 RUN npm install
 RUN npm install sequelize
@@ -14,7 +15,4 @@ RUN npm install sequelize-cli
 # add app
 COPY . ./
 
-
-# start app
-CMD ["tail", "-f", "/tmp"]
 
