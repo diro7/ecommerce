@@ -22,7 +22,7 @@ const Women = (props) => (
   <Grid alignCenter={true} style={{ padding: '2em' }}>
     {/* SEO */}
     <Helmet>
-      <title>Monthly supply of clothes and accessories for Women - Crate</title>
+      <title>Suministro mensual de ropa y accesorios para mujeres - Canasta</title>
     </Helmet>
 
     {/* Left Content - Image Collage */}
@@ -53,7 +53,7 @@ const Women = (props) => (
       <H2 font="secondary">Monthly crates for Women</H2>
 
       <H5 style={{ marginTop: '0.5em' }}>
-        Save time. Look great. The personal styling service customized to your fit, lifestyle & spending preferences.
+      Ahorra tiempo y queda genial. El servicio de estilo personalizado según sus preferencias de ajuste, estilo de vida y presupuesto.
       </H5>
 
       {/* Call to action */}

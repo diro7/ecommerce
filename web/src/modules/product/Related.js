@@ -20,7 +20,7 @@ class Related extends PureComponent {
     this.refresh(this.props.productId)
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.productId !== this.props.productId) {
       this.refresh(nextProps.productId)
     }
@@ -47,7 +47,7 @@ class Related extends PureComponent {
                     </GridCell>
                   ))
                 : <GridCell>
-                    <EmptyMessage message="No related products to show." />
+                    <EmptyMessage message="No hay productos relacionados para mostrar." />
                   </GridCell>
           }
         </Grid>

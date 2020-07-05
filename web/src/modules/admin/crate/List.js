@@ -34,10 +34,10 @@ class List extends PureComponent {
 
   remove = (id) => {
     if (id > 0) {
-      let check = confirm('Are you sure you want to delete this crate?')
+      let check = confirm('Está seguro que desea eliminar esta canasta?')
 
       if (check) {
-        this.props.messageShow('Deleting, please wait...')
+        this.props.messageShow('Borrando, por favor espere...')
 
         this.props.removeCrate({ id })
           .then(response => {
@@ -45,16 +45,16 @@ class List extends PureComponent {
               if (response.data.errors && response.data.errors.length > 0) {
                 this.props.messageShow(response.data.errors[0].message)
               } else {
-                this.props.messageShow('Crate deleted successfully.')
+                this.props.messageShow('Canasta borrada exitosamente.')
 
                 this.props.getCrateList(false)
               }
             } else {
-              this.props.messageShow('Please try again.')
+              this.props.messageShow('Por favor intente de nuevo.')
             }
           })
           .catch(error => {
-            this.props.messageShow('There was some error. Please try again.')
+            this.props.messageShow('Ha ocurrido un error. Por favor intente de nuevo.')
 
           })
           .then(() => {
@@ -77,7 +77,7 @@ class List extends PureComponent {
       <div>
         {/* SEO */}
         <Helmet>
-          <title>Crates - Admin - Crate</title>
+          <title>Canastas - Admin - Canasta</title>
         </Helmet>
 
         {/* Top menu bar */}
@@ -106,7 +106,7 @@ class List extends PureComponent {
                   <th>Description</th>
                   <th>Created at</th>
                   <th>Updated at</th>
-                  <th style={{ textAlign: 'center' }}>Actions</th>
+                  <th style={{ textAlign: 'center' }}>Acciones</th>
                 </tr>
                 </thead>
 
@@ -115,7 +115,7 @@ class List extends PureComponent {
                   isLoading
                     ? <tr>
                         <td colSpan="6">
-                          <Loading message="loading crates..."/>
+                          <Loading message="Cargando canastas..."/>
                         </td>
                       </tr>
                     : list.length > 0
@@ -150,7 +150,7 @@ class List extends PureComponent {
                         ))
                       : <tr>
                           <td colSpan="6">
-                            <EmptyMessage message="No crates to show."/>
+                            <EmptyMessage message="No hay canastas para mostrar."/>
                           </td>
                         </tr>
                 }

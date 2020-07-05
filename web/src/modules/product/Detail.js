@@ -31,7 +31,7 @@ class Detail extends PureComponent {
     this.refresh(this.props.match.params.slug)
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.match.params.slug !== this.props.match.params.slug) {
       this.refresh(nextProps.match.params.slug)
     }

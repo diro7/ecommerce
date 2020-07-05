@@ -38,13 +38,13 @@ const Header = (props) => {
 
           {/* Left menu */}
           <Menu style={{ float: 'left', marginTop: '0.5em', marginLeft: '2em' }}>
-            <MenuItem to={home.men.path}>Men</MenuItem>
+            <MenuItem to={home.men.path}>Hombres</MenuItem>
 
-            <MenuItem to={home.women.path}>Women</MenuItem>
+            <MenuItem to={home.women.path}>Mujeres</MenuItem>
 
-            <MenuItem to={home.howItWorks.path}>How It Works</MenuItem>
+            <MenuItem to={home.howItWorks.path}>Cómo funciona?</MenuItem>
 
-            <MenuItem to={home.whatsNew.path}>What's New</MenuItem>
+            <MenuItem to={home.whatsNew.path}>Qué hay de nuevo?</MenuItem>
           </Menu>
         </GridCell>
 
@@ -56,11 +56,11 @@ const Header = (props) => {
               <Menu>
                 { props.user.details.role === 'ADMIN' && <MenuItem to={admin.dashboard.path} section="admin">Admin</MenuItem> }
 
-                <MenuItem to={crate.list.path}>Crates</MenuItem>
+                <MenuItem to={crate.list.path}>Canastas</MenuItem>
 
-                <MenuItem to={user.subscriptions.path}>Subscriptions</MenuItem>
+                <MenuItem to={user.subscriptions.path}>Suscripciones</MenuItem>
 
-                <MenuItem to={user.profile.path}>Profile</MenuItem>
+                <MenuItem to={user.profile.path}>Perfil</MenuItem>
               </Menu>
               :
               <Menu>
