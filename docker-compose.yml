@@ -5,6 +5,8 @@ services:
     image: api:latest
     build: api/
     command: ["./wait-for-it.sh", "db:3306", "--", "npm", "start"]
+    environment:
+      NODE_ENV: production
     ports:
       - "8000:8000"
     depends_on:
