@@ -1,25 +1,17 @@
-// Imports
-import express from 'express'
-
-// App Imports
-import setupLoadModules from './setup/load-modules'
-import setupGraphQL from './setup/graphql'
-import setupUpload from './setup/upload'
-import setupStartServer from './setup/start-server'
-
-// Create express server
-const server = express()
-
-// Setup load modules
-setupLoadModules(server)
-
-// Setup uploads
-setupUpload(server)
-
-// Setup GraphQL
-setupGraphQL(server)
+import server from './server';
+import { PORT, NODE_ENV } from './config/env';
 
 // Start server
-setupStartServer(server)
+console.info('SETUP - Starting server..')
 
+server.listen(PORT, (error) => {
+  if (error) {
+    console.error('ERROR - Unable to start server.')
+  } else {
+    console.info(`INFO - Server started on http://localhost:${ PORT } [${ NODE_ENV }]`)
+  }
+})
 export default server;
+
+
+
