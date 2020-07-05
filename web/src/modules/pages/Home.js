@@ -33,7 +33,7 @@ const Home = (props) => (
     }}>
       {/* SEO */}
       <Helmet>
-        <title>Monthly supply of clothes and accessories for Men and Women - Crate</title>
+        <title>Suministro mensual de ropa y accesorios para hombres y mujeres - Canasta</title>
       </Helmet>
 
       {/* Content */}
@@ -41,14 +41,14 @@ const Home = (props) => (
         <H1 font="secondary" style={{ textShadow: textLevel1 }}>Crate</H1>
 
         <H4 style={{ textShadow: textLevel1, marginTop: '0.5em' }}>
-          Monthly subscription of trendy clothes and accessories
+          Suscripción mensual de ropa y accesorios de moda
         </H4>
 
         {/* Call to action */}
         {
           
             <Link to={userRoutes.signup.path}>
-                <Button theme="secondary" style={{ marginTop: '1em' }}>Get Started</Button>
+                <Button theme="secondary" style={{ marginTop: '1em' }}>Comience aquí</Button>
               </Link>
         }
       </GridCell>

@@ -60,7 +60,7 @@ class CreateOrEdit extends Component {
           }
         })
         .catch(error => {
-          this.props.messageShow('There was some error fetching crate types. Please try again.')
+          this.props.messageShow('Se produjo un error al obtener los tipos de canastas. Inténtalo de nuevo.')
         })
     }
   }
@@ -81,7 +81,7 @@ class CreateOrEdit extends Component {
       isLoading: true
     })
 
-    this.props.messageShow('Saving crate, please wait...')
+    this.props.messageShow('Guardando canasta, por favor espere...')
 
     // Save crate
     this.props.crateCreateOrUpdate(this.state.crate)
@@ -93,13 +93,13 @@ class CreateOrEdit extends Component {
         if (response.data.errors && response.data.errors.length > 0) {
           this.props.messageShow(response.data.errors[0].message)
         } else {
-          this.props.messageShow('Crate saved successfully.')
+          this.props.messageShow('Canasta guardada exitosamente.')
 
           this.props.history.push(admin.crateList.path)
         }
       })
       .catch(error => {
-        this.props.messageShow('There was some error. Please try again.')
+        this.props.messageShow('Ha ocurrido un error. Por favor intente de nuevo.')
 
         this.setState({
           isLoading: false
@@ -117,7 +117,7 @@ class CreateOrEdit extends Component {
       <div>
         {/* SEO */}
         <Helmet>
-          <title>Crate / Create or Edit - Admin - Crate</title>
+          <title>Canasta / Crear o editar - Admin - Canasta</title>
         </Helmet>
 
         {/* Top menu bar */}
@@ -138,7 +138,7 @@ class CreateOrEdit extends Component {
           <Grid alignCenter={true} style={{ padding: '1em' }}>
             <GridCell>
               <H4 font="secondary" style={{ marginBottom: '1em', textAlign: 'center' }}>
-                {this.props.match.params.id === undefined ? 'Create' : 'Edit'} Crate
+                {this.props.match.params.id === undefined ? 'Create' : 'Edit'} Canasta
               </H4>
 
               {/* Form */}

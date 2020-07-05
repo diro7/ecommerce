@@ -33,20 +33,20 @@ class Item extends PureComponent {
       isLoading: true
     })
 
-    this.props.messageShow('Subscribing, please wait...')
+    this.props.messageShow('Suscribiendo, por favor espere...')
 
     this.props.create({ crateId })
       .then(response => {
         if (response.data.errors && response.data.errors.length > 0) {
           this.props.messageShow(response.data.errors[0].message)
         } else {
-          this.props.messageShow('Subscribed successfully.')
+          this.props.messageShow('Suscrito exitosamente.')
 
           this.props.history.push(userRoutes.subscriptions.path)
         }
       })
       .catch(error => {
-        this.props.messageShow('There was some error subscribing to this crate. Please try again.')
+        this.props.messageShow('Hubo un error al suscribir esta canasta. Por favor intente de nuevo.')
       })
       .then(() => {
         this.setState({
