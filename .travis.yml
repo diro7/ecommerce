@@ -1,10 +1,12 @@
   
-language:      node_js
+language: node_js
 git:
-  depth:       3
+  depth: 3
 node_js:
   - "node"
-install:       npm install
+install: npm install
+services:
+  - mysql
 script:
   - cd web
   - npm install
@@ -12,10 +14,17 @@ script:
   - npm run build:client
   - cd ..
   - cd api
-  - npm install
+  - npm i
+  - npx sequelize db:migrate
   - npm run test
 cache:
   directories:
     - node_modules
 notifications:
-  email:       false
+  email: false
+env:
+  - NODE_ENV=test
+before_install:
+  - mysql -e 'CREATE DATABASE ecommerce;'
+after_failure:
+  - cat  /home/travis/.npm/_logs/*
