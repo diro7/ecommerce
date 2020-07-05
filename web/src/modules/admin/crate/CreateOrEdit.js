@@ -117,7 +117,7 @@ class CreateOrEdit extends Component {
       <div>
         {/* SEO */}
         <Helmet>
-          <title>Crate / Create or Edit - Admin - Crate</title>
+          <title>Canasta / Crear o editar - Admin - Canasta</title>
         </Helmet>
 
         {/* Top menu bar */}
@@ -138,7 +138,7 @@ class CreateOrEdit extends Component {
           <Grid alignCenter={true} style={{ padding: '1em' }}>
             <GridCell>
               <H4 font="secondary" style={{ marginBottom: '1em', textAlign: 'center' }}>
-                {this.props.match.params.id === undefined ? 'Create' : 'Edit'} Crate
+                {this.props.match.params.id === undefined ? 'Create' : 'Edit'} Canasta
               </H4>
 
               {/* Form */}

@@ -150,7 +150,7 @@ class List extends PureComponent {
                         ))
                       : <tr>
                           <td colSpan="6">
-                            <EmptyMessage message="No crates to show."/>
+                            <EmptyMessage message="No hay canastas para mostrar."/>
                           </td>
                         </tr>
                 }
