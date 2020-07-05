@@ -17,7 +17,7 @@ EmptyMessage.propTypes = {
 
 // Component Default Properties
 EmptyMessage.defaultProps = {
-  message: 'No data to show'
+  message: 'No hay datos para mostrar'
 }
 
 export default EmptyMessage

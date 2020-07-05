@@ -40,16 +40,16 @@ class WhatsNew extends PureComponent {
       <div>
         {/* SEO */}
         <Helmet>
-          <title>What's new - Crate</title>
+          <title>Qué hay de nuevo? - Canasta</title>
         </Helmet>
 
         {/* Top title bar */}
         <Grid style={{ backgroundColor: grey }}>
           <GridCell style={{ padding: '2em', textAlign: 'center' }}>
-            <H3 font="secondary">What's new</H3>
+            <H3 font="secondary">Que hay de nuevo</H3>
 
-            <p style={{ marginTop: '1em', color: grey2 }}>Watch this space to keep updated with latest clothes and
-              accessories we add to your crates.</p>
+            <p style={{ marginTop: '1em', color: grey2 }}>Mire este espacio para mantenerse actualizado con la última ropa y
+              Accesorios que agregamos a sus canastas.</p>
           </GridCell>
         </Grid>
 
@@ -64,14 +64,14 @@ class WhatsNew extends PureComponent {
                       <ProductItem product={product}/>
                     </GridCell>
                   ))
-                : <EmptyMessage message="No products to show" />
+                : <EmptyMessage message="No hay productos para mostrar" />
           }
         </Grid>
 
         {/* Bottom call to action bar */}
         <Grid style={{ backgroundColor: grey }}>
           <GridCell style={{ padding: '3em', textAlign: 'center' }}>
-            <p style={{ marginBottom: '1em', color: grey2 }}>Like what you see?</p>
+            <p style={{ marginBottom: '1em', color: grey2 }}>Le gusta lo que ve?</p>
 
             {
               this.props.user.isAuthenticated
