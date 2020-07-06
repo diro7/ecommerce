@@ -15,7 +15,7 @@ script:
   - cd ..
   - cd api
   - npm i
-  - npm sequelize db:migrate
+  - npx sequelize db:migrate
   - npm run test
 cache:
   directories:
