@@ -39,7 +39,7 @@ Array [
             }
           }
         >
-          Monthly subscription of trendy clothes and accessories
+          Suscripción mensual de ropa y accesorios de moda
         </h4>
         <a
           href="/user/signup"
@@ -55,7 +55,7 @@ Array [
             }
             type="button"
           >
-            Get Started
+            Comience aquí
           </button>
         </a>
       </div>
@@ -124,7 +124,7 @@ Array [
             >
               Su tienda en linea de 
               <br />
-               clothes and accessories
+              Ropa y accesorios
             </h6>
             <button
               className="jsx-1228826222 "
@@ -137,7 +137,7 @@ Array [
               }
               type="button"
             >
-              Next
+              Siguiente
             </button>
           </div>
           <div
