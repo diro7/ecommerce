@@ -50,7 +50,7 @@ class Login extends Component {
   onSubmit = (event) => {
     event.preventDefault()
 
-    this.props.messageShow('Logging in, please wait...')
+    this.props.messageShow('Logueandi usuario, por favor espere...')
 
     this.props.login(this.state.user)
       .then(response => {
