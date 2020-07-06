@@ -68,7 +68,6 @@ test("Create user", async (done) => {
           if (err) return done(err);
           expect(res.statusCode).toBe(200);
           expect(res.body).toBeInstanceOf(Object);
-          console.log(res.body);
           expect(res.body.data.userLogin.user.name).toEqual('The User');
           expect(res.body.data.userLogin.user.email).toEqual(randomEmail);
           expect(res.body.data.userLogin.token).toEqual(expect.any(String));
