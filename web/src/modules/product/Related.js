@@ -47,7 +47,7 @@ class Related extends PureComponent {
                     </GridCell>
                   ))
                 : <GridCell>
-                    <EmptyMessage message="No related products to show." />
+                    <EmptyMessage message="No hay productos relacionados para mostrar." />
                   </GridCell>
           }
         </Grid>
