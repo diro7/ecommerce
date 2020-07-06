@@ -20,7 +20,7 @@ class Related extends PureComponent {
     this.refresh(this.props.productId)
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.productId !== this.props.productId) {
       this.refresh(nextProps.productId)
     }
